@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Greenhouse List - Crisp Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#fa746f",
+            "surface": "#f6faf6",
+            "tertiary-fixed-dim": "#a9e0ed",
+            "on-secondary": "#e4fff3",
+            "inverse-on-surface": "#999e9b",
+            "on-surface": "#2b3530",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#c0dace",
+            "on-background": "#2b3530",
+            "on-error": "#fff7f6",
+            "on-primary": "#e4fff3",
+            "tertiary-dim": "#205a65",
+            "error-dim": "#67040d",
+            "background": "#f6faf6",
+            "on-secondary-container": "#3f574e",
+            "surface-container-low": "#eff5f0",
+            "on-tertiary": "#edfbff",
+            "outline-variant": "#aab4af",
+            "on-primary-fixed": "#004938",
+            "on-secondary-fixed-variant": "#496057",
+            "on-tertiary-fixed-variant": "#2d6570",
+            "primary-fixed-dim": "#a0e2c9",
+            "on-error-container": "#6e0a12",
+            "surface-tint": "#286a56",
+            "secondary-container": "#cee9dc",
+            "surface-bright": "#f6faf6",
+            "tertiary": "#2f6772",
+            "inverse-primary": "#bbffe5",
+            "surface-container-highest": "#dae5df",
+            "surface-dim": "#d2ddd6",
+            "tertiary-container": "#b7effb",
+            "on-tertiary-container": "#215b66",
+            "on-secondary-fixed": "#2d443b",
+            "primary-container": "#adf0d7",
+            "primary-dim": "#195e4b",
+            "on-primary-container": "#175c49",
+            "on-tertiary-fixed": "#034853",
+            "surface-container": "#e8f0ea",
+            "surface-container-high": "#e1eae5",
+            "on-surface-variant": "#57615c",
+            "secondary-dim": "#40584f",
+            "error": "#a83836",
+            "primary": "#286a56",
+            "outline": "#727d78",
+            "secondary-fixed": "#cee9dc",
+            "on-primary-fixed-variant": "#246653",
+            "tertiary-fixed": "#b7effb",
+            "primary-fixed": "#adf0d7",
+            "secondary": "#4c645b",
+            "inverse-surface": "#0a0f0d",
+            "surface-variant": "#dae5df"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Work Sans"],
+            "label": ["Work Sans"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen">
+
+  <!-- TopAppBar -->
+  <header class="top-app-bar">
+    <div class="flex items-center gap-4">
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <h1 class="font-headline font-semibold tracking-tight text-on-surface text-lg">Greenhouse List</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">shopping_cart</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-40 px-6 max-w-lg mx-auto">
+
+    <!-- Aktiver Einkauf Header -->
+    <section class="mb-8">
+      <div class="flex items-center justify-between mb-3">
+        <span class="status-badge">Aktiver Einkauf</span>
+        <span class="font-label text-xs text-on-surface-variant">Aktualisiert: gerade eben</span>
+      </div>
+      <h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Crisp Cart</h2>
+      <p class="font-body text-on-surface-variant text-base leading-relaxed">Dein aktueller Einkaufskorb mit allen frischen Artikeln.</p>
+    </section>
+
+    <!-- Fortschrittsbalken -->
+    <div class="progress-bar-wrapper">
+      <div class="flex justify-between mb-2">
+        <span class="font-label text-sm font-medium text-on-surface">Fortschritt</span>
+        <span class="font-label text-sm font-semibold text-primary">5 von 12</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" style="width: 42%;"></div>
+      </div>
+    </div>
+
+    <!-- Warenkorb-Liste -->
+    <div class="space-y-10 mt-8">
+
+      <!-- Kategorie: Obst & Gemüse -->
+      <section>
+        <div class="category-header">
+          <h3 class="font-headline text-sm font-bold text-primary tracking-widest uppercase">Obst &amp; Gemüse</h3>
+          <div class="category-divider"></div>
+          <span class="font-label text-[10px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">3 Artikel</span>
+        </div>
+        <div class="space-y-3">
+          <!-- Im Korb -->
+          <div class="cart-item cart-item--done">
+            <div class="checkbox checkbox--checked">
+              <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+            </div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name cart-item-name--done">Bio-Äpfel</span>
+              <span class="cart-item-detail">2 kg &bull; Regional</span>
+            </div>
+            <span class="cart-item-price">4,98 &euro;</span>
+          </div>
+          <!-- Noch offen -->
+          <div class="cart-item">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name">Avocados</span>
+              <span class="cart-item-detail">3 Stück &bull; Reif</span>
+            </div>
+            <span class="cart-item-price">3,57 &euro;</span>
+          </div>
+          <div class="cart-item">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name">Kirschtomaten</span>
+              <span class="cart-item-detail">500g Schale</span>
+            </div>
+            <span class="cart-item-price">2,49 &euro;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kategorie: Molkereiprodukte -->
+      <section>
+        <div class="category-header">
+          <h3 class="font-headline text-sm font-bold text-primary tracking-widest uppercase">Molkereiprodukte</h3>
+          <div class="category-divider"></div>
+          <span class="font-label text-[10px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">2 Artikel</span>
+        </div>
+        <div class="space-y-3">
+          <div class="cart-item cart-item--done">
+            <div class="checkbox checkbox--checked">
+              <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+            </div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name cart-item-name--done">Hafermilch</span>
+              <span class="cart-item-detail">2x 1L &bull; Barista Edition</span>
+            </div>
+            <span class="cart-item-price">3,98 &euro;</span>
+          </div>
+          <div class="cart-item">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name">Mozzarella</span>
+              <span class="cart-item-detail">125g &bull; Bio</span>
+            </div>
+            <span class="cart-item-price">1,89 &euro;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kategorie: Backwaren -->
+      <section>
+        <div class="category-header">
+          <h3 class="font-headline text-sm font-bold text-primary tracking-widest uppercase">Backwaren</h3>
+          <div class="category-divider"></div>
+          <span class="font-label text-[10px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">2 Artikel</span>
+        </div>
+        <div class="space-y-3">
+          <div class="cart-item cart-item--done">
+            <div class="checkbox checkbox--checked">
+              <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+            </div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name cart-item-name--done">Sauerteigbrot</span>
+              <span class="cart-item-detail">750g &bull; Vollkorn</span>
+            </div>
+            <span class="cart-item-price">3,49 &euro;</span>
+          </div>
+          <div class="cart-item">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="cart-item-name">Croissants</span>
+              <span class="cart-item-detail">4 Stück &bull; Butter</span>
+            </div>
+            <span class="cart-item-price">2,99 &euro;</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Warenkorb Zusammenfassung -->
+    <section class="summary-card">
+      <div class="flex items-center justify-between mb-3">
+        <h4 class="font-headline font-bold text-on-surface text-lg">Zusammenfassung</h4>
+        <span class="material-symbols-outlined text-primary">receipt_long</span>
+      </div>
+      <div class="space-y-2 mb-4">
+        <div class="flex justify-between font-label text-sm text-on-surface-variant">
+          <span>Artikel im Korb</span>
+          <span class="font-semibold text-on-surface">5 / 12</span>
+        </div>
+        <div class="flex justify-between font-label text-sm text-on-surface-variant">
+          <span>Geschätzte Summe</span>
+          <span class="font-semibold text-on-surface">23,39 &euro;</span>
+        </div>
+      </div>
+      <div class="h-[1px] bg-outline-variant/20 my-3"></div>
+      <div class="flex justify-between font-headline font-bold text-lg">
+        <span>Gesamt</span>
+        <span class="text-primary">23,39 &euro;</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Checkout Button -->
+  <div class="checkout-wrapper">
+    <button class="checkout-btn">
+      <span class="material-symbols-outlined">shopping_cart_checkout</span>
+      Einkauf abschließen
+    </button>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">format_list_bulleted</span>
+      <span class="nav-label">Lists</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">kitchen</span>
+      <span class="nav-label">Pantry</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">receipt_long</span>
+      <span class="nav-label">Recipes</span>
+    </a>
+    <a class="nav-item nav-item--active" href="#">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+      <span class="nav-label">Cart</span>
+    </a>
+  </nav>
+
+</body>
+</html>

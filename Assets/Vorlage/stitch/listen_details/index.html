@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Greenhouse List - Listen Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#fa746f",
+            "surface": "#f6faf6",
+            "tertiary-fixed-dim": "#a9e0ed",
+            "on-secondary": "#e4fff3",
+            "inverse-on-surface": "#999e9b",
+            "on-surface": "#2b3530",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#c0dace",
+            "on-background": "#2b3530",
+            "on-error": "#fff7f6",
+            "on-primary": "#e4fff3",
+            "tertiary-dim": "#205a65",
+            "error-dim": "#67040d",
+            "background": "#f6faf6",
+            "on-secondary-container": "#3f574e",
+            "surface-container-low": "#eff5f0",
+            "on-tertiary": "#edfbff",
+            "outline-variant": "#aab4af",
+            "on-primary-fixed": "#004938",
+            "on-secondary-fixed-variant": "#496057",
+            "on-tertiary-fixed-variant": "#2d6570",
+            "primary-fixed-dim": "#a0e2c9",
+            "on-error-container": "#6e0a12",
+            "surface-tint": "#286a56",
+            "secondary-container": "#cee9dc",
+            "surface-bright": "#f6faf6",
+            "tertiary": "#2f6772",
+            "inverse-primary": "#bbffe5",
+            "surface-container-highest": "#dae5df",
+            "surface-dim": "#d2ddd6",
+            "tertiary-container": "#b7effb",
+            "on-tertiary-container": "#215b66",
+            "on-secondary-fixed": "#2d443b",
+            "primary-container": "#adf0d7",
+            "primary-dim": "#195e4b",
+            "on-primary-container": "#175c49",
+            "on-tertiary-fixed": "#034853",
+            "surface-container": "#e8f0ea",
+            "surface-container-high": "#e1eae5",
+            "on-surface-variant": "#57615c",
+            "secondary-dim": "#40584f",
+            "error": "#a83836",
+            "primary": "#286a56",
+            "outline": "#727d78",
+            "secondary-fixed": "#cee9dc",
+            "on-primary-fixed-variant": "#246653",
+            "tertiary-fixed": "#b7effb",
+            "primary-fixed": "#adf0d7",
+            "secondary": "#4c645b",
+            "inverse-surface": "#0a0f0d",
+            "surface-variant": "#dae5df"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Work Sans"],
+            "label": ["Work Sans"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen">
+
+  <!-- TopAppBar -->
+  <header class="top-app-bar">
+    <div class="flex items-center gap-4">
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <h1 class="font-headline font-semibold tracking-tight text-on-surface text-lg">Wochenend-Einkauf</h1>
+    </div>
+    <button class="icon-btn">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+  </header>
+
+  <main class="pt-20 pb-40 px-6 max-w-lg mx-auto">
+
+    <!-- Hero Header -->
+    <div class="mb-8 mt-4">
+      <div class="flex items-center justify-between mb-2">
+        <span class="status-badge">AKTIV</span>
+        <span class="text-on-surface-variant text-xs font-label">12. OKT 2023</span>
+      </div>
+      <h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Wochenend-Einkauf</h2>
+      <div class="flex gap-2 items-center text-on-surface-variant">
+        <span class="material-symbols-outlined text-sm">inventory_2</span>
+        <p class="text-sm font-label font-medium">8 von 12 Artikeln übrig</p>
+      </div>
+    </div>
+
+    <!-- Kategorisierte Liste -->
+    <div class="space-y-10">
+
+      <!-- Kategorie: Obst & Gemüse -->
+      <section>
+        <div class="category-header">
+          <h3 class="font-headline text-sm font-bold text-primary tracking-widest uppercase">Obst &amp; Gemüse</h3>
+          <div class="category-divider"></div>
+        </div>
+        <div class="space-y-3">
+          <!-- Artikel -->
+          <div class="list-item group">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="item-name">Äpfel</span>
+              <span class="item-detail">2 kg, Bio</span>
+            </div>
+            <span class="material-symbols-outlined drag-handle">drag_indicator</span>
+          </div>
+          <div class="list-item group">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="item-name">Bananen</span>
+              <span class="item-detail">1 Staude</span>
+            </div>
+            <span class="material-symbols-outlined drag-handle">drag_indicator</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kategorie: Molkereiprodukte -->
+      <section>
+        <div class="category-header">
+          <h3 class="font-headline text-sm font-bold text-primary tracking-widest uppercase">Molkereiprodukte</h3>
+          <div class="category-divider"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="list-item group">
+            <div class="checkbox"></div>
+            <div class="ml-4 flex-grow">
+              <span class="item-name">Milch</span>
+              <span class="item-detail">2x 1L, Hafer</span>
+            </div>
+            <span class="material-symbols-outlined drag-handle">drag_indicator</span>
+          </div>
+          <!-- Abgehakter Artikel -->
+          <div class="list-item list-item--checked">
+            <div class="checkbox checkbox--checked">
+              <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+            </div>
+            <div class="ml-4 flex-grow">
+              <span class="item-name item-name--checked">Eier</span>
+              <span class="item-detail">10er Pack, Freiland</span>
+            </div>
+          </div>
+          <div class="list-item list-item--checked">
+            <div class="checkbox checkbox--checked">
+              <span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+            </div>
+            <div class="ml-4 flex-grow">
+              <span class="item-name item-name--checked">Griechischer Joghurt</span>
+              <span class="item-detail">500g Becher</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vorschläge Bento Grid -->
+      <section class="mt-12">
+        <h4 class="font-headline text-lg font-bold text-on-surface mb-4">Häufig dazu gekauft</h4>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="suggestion-card suggestion-card--green">
+            <span class="material-symbols-outlined text-primary text-3xl">coffee</span>
+            <div class="mt-auto">
+              <p class="font-headline font-bold text-on-secondary-container leading-tight">Espresso Bohnen</p>
+              <button class="suggestion-btn suggestion-btn--primary">Hinzufügen</button>
+            </div>
+          </div>
+          <div class="suggestion-card suggestion-card--blue">
+            <span class="material-symbols-outlined text-tertiary text-3xl">bakery_dining</span>
+            <div class="mt-auto">
+              <p class="font-headline font-bold text-on-tertiary-container leading-tight">Vollkorn Brot</p>
+              <button class="suggestion-btn suggestion-btn--tertiary">Hinzufügen</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Floating Quick Add -->
+  <div class="quick-add-wrapper">
+    <div class="quick-add">
+      <div class="pl-4 pr-2 text-primary">
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </div>
+      <input class="quick-add-input" placeholder="Neuer Artikel (z.B. Käse, Wein...)" type="text" />
+      <button class="quick-add-btn">
+        <span class="material-symbols-outlined">arrow_upward</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a class="nav-item nav-item--active" href="#">
+      <span class="material-symbols-outlined">format_list_bulleted</span>
+      <span class="nav-label">Lists</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">kitchen</span>
+      <span class="nav-label">Pantry</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">receipt_long</span>
+      <span class="nav-label">Recipes</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">settings</span>
+      <span class="nav-label">Settings</span>
+    </a>
+  </nav>
+
+</body>
+</html>

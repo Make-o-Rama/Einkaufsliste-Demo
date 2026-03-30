@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Greenhouse List - Add New Item</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        h1, h2, h3, .headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#fa746f",
+              "surface": "#f6faf6",
+              "tertiary-fixed-dim": "#a9e0ed",
+              "on-secondary": "#e4fff3",
+              "inverse-on-surface": "#999e9b",
+              "on-surface": "#2b3530",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#c0dace",
+              "on-background": "#2b3530",
+              "on-error": "#fff7f6",
+              "on-primary": "#e4fff3",
+              "tertiary-dim": "#205a65",
+              "error-dim": "#67040d",
+              "background": "#f6faf6",
+              "on-secondary-container": "#3f574e",
+              "surface-container-low": "#eff5f0",
+              "on-tertiary": "#edfbff",
+              "outline-variant": "#aab4af",
+              "on-primary-fixed": "#004938",
+              "on-secondary-fixed-variant": "#496057",
+              "on-tertiary-fixed-variant": "#2d6570",
+              "primary-fixed-dim": "#a0e2c9",
+              "on-error-container": "#6e0a12",
+              "surface-tint": "#286a56",
+              "secondary-container": "#cee9dc",
+              "surface-bright": "#f6faf6",
+              "tertiary": "#2f6772",
+              "inverse-primary": "#bbffe5",
+              "surface-container-highest": "#dae5df",
+              "surface-dim": "#d2ddd6",
+              "tertiary-container": "#b7effb",
+              "on-tertiary-container": "#215b66",
+              "on-secondary-fixed": "#2d443b",
+              "primary-container": "#adf0d7",
+              "primary-dim": "#195e4b",
+              "on-primary-container": "#175c49",
+              "on-tertiary-fixed": "#034853",
+              "surface-container": "#e8f0ea",
+              "surface-container-high": "#e1eae5",
+              "on-surface-variant": "#57615c",
+              "secondary-dim": "#40584f",
+              "error": "#a83836",
+              "primary": "#286a56",
+              "outline": "#727d78",
+              "secondary-fixed": "#cee9dc",
+              "on-primary-fixed-variant": "#246653",
+              "tertiary-fixed": "#b7effb",
+              "primary-fixed": "#adf0d7",
+              "secondary": "#4c645b",
+              "inverse-surface": "#0a0f0d",
+              "surface-variant": "#dae5df"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f6faf6]/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full shadow-[0_12px_32px_rgba(43,53,48,0.06)]">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#286a56] hover:bg-[#e8f0ea] p-2 rounded-full transition-colors active:scale-95 duration-200">
+                menu
+            </button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-[#2b3530] text-lg">Greenhouse List</h1>
+</div>
+<button class="material-symbols-outlined text-[#286a56] hover:bg-[#e8f0ea] p-2 rounded-full transition-colors active:scale-95 duration-200">
+            search
+        </button>
+</header>
+<!-- Main Content: Add New Item Screen -->
+<main class="flex-1 mt-16 mb-24 px-6 pt-8 max-w-2xl mx-auto w-full">
+<!-- Header Section -->
+<header class="mb-10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-primary font-headline font-bold tracking-widest text-[10px] uppercase">New Entry</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label text-[10px] font-semibold tracking-wider">MARCH 24</span>
+</div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface leading-tight">What are we <br/><span class="text-primary">stocking today?</span></h2>
+</header>
+<!-- Form Canvas -->
+<div class="space-y-8">
+<!-- Item Name Input -->
+<section class="space-y-3">
+<label class="block font-headline text-sm font-bold text-on-surface-variant ml-1">Item Name</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 text-xl font-headline font-semibold text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 transition-all" placeholder="e.g. Organic Kale" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-2">
+<span class="material-symbols-outlined text-outline-variant">edit_note</span>
+</div>
+</div>
+</section>
+<!-- Category Selection Chips -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<label class="block font-headline text-sm font-bold text-on-surface-variant">Category</label>
+<button class="text-primary text-xs font-bold uppercase tracking-wider">Manage</button>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full font-label text-sm font-medium transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+                        Produce
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-variant rounded-full font-label text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">egg</span>
+                        Dairy
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-variant rounded-full font-label text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+                        Bakery
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-variant rounded-full font-label text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+                        Pantry
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-variant rounded-full font-label text-sm font-medium hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">flatware</span>
+                        Frozen
+                    </button>
+</div>
+</section>
+<!-- Date & Quantity Bento Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Date Picker Interaction -->
+<section class="bg-surface-container-low p-5 rounded-xl space-y-3">
+<label class="block font-headline text-xs font-bold text-on-surface-variant uppercase tracking-widest">Target Date</label>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Tomorrow</p>
+<p class="font-label text-xs text-on-surface-variant">March 25, 2024</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+</section>
+<!-- Quantity Stepper -->
+<section class="bg-surface-container-low p-5 rounded-xl space-y-3">
+<label class="block font-headline text-xs font-bold text-on-surface-variant uppercase tracking-widest">Quantity</label>
+<div class="flex items-center justify-between">
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:opacity-80 transition-all active:scale-90">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="font-headline font-bold text-xl">2</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90 transition-all active:scale-90">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Contextual Card: Visual Reference -->
+<section class="relative h-40 rounded-2xl overflow-hidden group">
+<img alt="Fresh produce section" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of vibrant fresh vegetables in a wooden crate with soft natural morning light in a greenhouse setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6GTbgKnRbJ4d2uUTgXguvZpfyXsUZpzcADvRzsjkZfXkVr-4tvKnVXNj2uGrSlL9DcHhdz-Lt4XaNCs4nfGKMCyVttyfPTsyTf8bwfQh46E9HsIhtxlCbL3ELoF7cJgBuLFZs8xPRaQPwgvP7xTYEdCOCqVqhkKveLTmuxrLVTZv7SGThvUeUQZEKKu7C1Yo6kRqqJPxkw64CR3jk13xxXapKNqZjZ1WIyMGTLvZ75Hm0-09BYNvPyr1ugmgUKT5cTNqpNlzx7Oqq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
+<p class="text-white font-headline font-medium text-sm italic">"Let food be thy medicine..."</p>
+</div>
+</section>
+<!-- Action Area -->
+<div class="pt-4 flex flex-col gap-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-[1.5rem] font-headline font-bold text-lg shadow-[0_12px_32px_rgba(40,106,86,0.2)] hover:shadow-[0_12px_32px_rgba(40,106,86,0.3)] transition-all active:scale-95 flex items-center justify-center gap-3">
+                    Add to Greenhouse
+                    <span class="material-symbols-outlined">eco</span>
+</button>
+<button class="w-full bg-transparent text-on-surface-variant py-3 font-label font-bold text-xs uppercase tracking-[0.2em] transition-opacity hover:opacity-70">
+                    Cancel Entry
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6faf6]/80 backdrop-blur-xl z-50 rounded-t-[2rem] shadow-[0_-8px_24px_rgba(43,53,48,0.04)]">
+<!-- Lists (Active for this Context) -->
+<button class="flex flex-col items-center justify-center bg-[#286a56] text-white rounded-full px-5 py-2 active:scale-90 duration-200">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Lists</span>
+</button>
+<!-- Pantry -->
+<button class="flex flex-col items-center justify-center text-[#57615c] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined">kitchen</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Pantry</span>
+</button>
+<!-- Recipes -->
+<button class="flex flex-col items-center justify-center text-[#57615c] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Recipes</span>
+</button>
+<!-- Settings -->
+<button class="flex flex-col items-center justify-center text-[#57615c] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Settings</span>
+</button>
+</nav>
+<!-- Decorative Corner Element -->
+<div class="fixed top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-40 -left-20 w-48 h-48 bg-tertiary/5 rounded-full blur-3xl -z-10"></div>
+</body></html>

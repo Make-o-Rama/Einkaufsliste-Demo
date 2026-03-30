@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#fa746f",
+              "surface": "#f6faf6",
+              "tertiary-fixed-dim": "#a9e0ed",
+              "on-secondary": "#e4fff3",
+              "inverse-on-surface": "#999e9b",
+              "on-surface": "#2b3530",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#c0dace",
+              "on-background": "#2b3530",
+              "on-error": "#fff7f6",
+              "on-primary": "#e4fff3",
+              "tertiary-dim": "#205a65",
+              "error-dim": "#67040d",
+              "background": "#f6faf6",
+              "on-secondary-container": "#3f574e",
+              "surface-container-low": "#eff5f0",
+              "on-tertiary": "#edfbff",
+              "outline-variant": "#aab4af",
+              "on-primary-fixed": "#004938",
+              "on-secondary-fixed-variant": "#496057",
+              "on-tertiary-fixed-variant": "#2d6570",
+              "primary-fixed-dim": "#a0e2c9",
+              "on-error-container": "#6e0a12",
+              "surface-tint": "#286a56",
+              "secondary-container": "#cee9dc",
+              "surface-bright": "#f6faf6",
+              "tertiary": "#2f6772",
+              "inverse-primary": "#bbffe5",
+              "surface-container-highest": "#dae5df",
+              "surface-dim": "#d2ddd6",
+              "tertiary-container": "#b7effb",
+              "on-tertiary-container": "#215b66",
+              "on-secondary-fixed": "#2d443b",
+              "primary-container": "#adf0d7",
+              "primary-dim": "#195e4b",
+              "on-primary-container": "#175c49",
+              "on-tertiary-fixed": "#034853",
+              "surface-container": "#e8f0ea",
+              "surface-container-high": "#e1eae5",
+              "on-surface-variant": "#57615c",
+              "secondary-dim": "#40584f",
+              "error": "#a83836",
+              "primary": "#286a56",
+              "outline": "#727d78",
+              "secondary-fixed": "#cee9dc",
+              "on-primary-fixed-variant": "#246653",
+              "tertiary-fixed": "#b7effb",
+              "primary-fixed": "#adf0d7",
+              "secondary": "#4c645b",
+              "inverse-surface": "#0a0f0d",
+              "surface-variant": "#dae5df"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f6faf6]/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(43,53,48,0.06)]">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<button class="text-[#286a56] active:scale-95 duration-200 p-2 hover:bg-[#e8f0ea] rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg text-[#286a56]">Greenhouse List</h1>
+<button class="text-[#286a56] active:scale-95 duration-200 p-2 hover:bg-[#e8f0ea] rounded-full">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-10">
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Manage Categories</h2>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-80">Organize your greenhouse list by customizing item groupings for a smoother shopping journey.</p>
+</section>
+<!-- Search / Quick Add Section -->
+<div class="mb-8 flex gap-3">
+<div class="flex-grow relative">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/20 font-body text-on-surface placeholder:text-outline-variant" placeholder="Add new category..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary p-4 rounded-xl shadow-lg active:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<!-- Categories List - Editorial Tonal Layers -->
+<div class="space-y-4">
+<!-- Category Item: Obst & Gemüse -->
+<div class="group bg-surface-container-low hover:bg-surface-container rounded-2xl p-4 flex items-center justify-between transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Obst &amp; Gemüse</h3>
+<span class="text-xs font-label text-on-surface-variant bg-tertiary-container px-2 py-0.5 rounded-full">12 Items</span>
+</div>
+</div>
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Item: Getränke -->
+<div class="group bg-surface-container-low hover:bg-surface-container rounded-2xl p-4 flex items-center justify-between transition-all duration-300 border-l-4 border-transparent hover:border-primary">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="local_drink" style="font-variation-settings: 'FILL' 1;">local_drink</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Getränke</h3>
+<span class="text-xs font-label text-on-surface-variant bg-tertiary-container px-2 py-0.5 rounded-full">8 Items</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Item: Haushalt -->
+<div class="group bg-surface-container-low hover:bg-surface-container rounded-2xl p-4 flex items-center justify-between transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="cleaning_services" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Haushalt</h3>
+<span class="text-xs font-label text-on-surface-variant bg-tertiary-container px-2 py-0.5 rounded-full">5 Items</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Item: Backwaren -->
+<div class="group bg-surface-container-low hover:bg-surface-container rounded-2xl p-4 flex items-center justify-between transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="bakery_dining" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Backwaren</h3>
+<span class="text-xs font-label text-on-surface-variant bg-tertiary-container px-2 py-0.5 rounded-full">4 Items</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Category Item: Milchprodukte -->
+<div class="group bg-surface-container-low hover:bg-surface-container rounded-2xl p-4 flex items-center justify-between transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="water_drop" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Milchprodukte</h3>
+<span class="text-xs font-label text-on-surface-variant bg-tertiary-container px-2 py-0.5 rounded-full">10 Items</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Suggestion Section -->
+<section class="mt-12 bg-primary-container/30 rounded-3xl p-6 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline font-bold text-on-primary-container text-lg mb-2">Smart Suggestions</h4>
+<p class="font-body text-sm text-on-primary-container/80 mb-4">Would you like to add these frequently used categories?</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-lowest text-primary text-xs font-medium px-4 py-2 rounded-full shadow-sm">Fleisch &amp; Fisch</span>
+<span class="bg-surface-container-lowest text-primary text-xs font-medium px-4 py-2 rounded-full shadow-sm">Tiefkühl</span>
+<span class="bg-surface-container-lowest text-primary text-xs font-medium px-4 py-2 rounded-full shadow-sm">Snacks</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="nest_eco_leaf">nest_eco_leaf</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#f6faf6]/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-8px_24px_rgba(43,53,48,0.04)]">
+<div class="flex justify-around items-center px-4 pb-6 pt-3">
+<button class="flex flex-col items-center justify-center text-[#57615c] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="format_list_bulleted">format_list_bulleted</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Lists</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#57615c] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="kitchen">kitchen</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Pantry</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#57615c] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Recipes</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#286a56] text-white rounded-full px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide">Settings</span>
+</button>
+</div>
+</nav>
+</body></html>

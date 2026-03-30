@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Greenhouse List - Kategorien verwalten</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#fa746f",
+            "surface": "#f6faf6",
+            "tertiary-fixed-dim": "#a9e0ed",
+            "on-secondary": "#e4fff3",
+            "inverse-on-surface": "#999e9b",
+            "on-surface": "#2b3530",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#c0dace",
+            "on-background": "#2b3530",
+            "on-error": "#fff7f6",
+            "on-primary": "#e4fff3",
+            "tertiary-dim": "#205a65",
+            "error-dim": "#67040d",
+            "background": "#f6faf6",
+            "on-secondary-container": "#3f574e",
+            "surface-container-low": "#eff5f0",
+            "on-tertiary": "#edfbff",
+            "outline-variant": "#aab4af",
+            "on-primary-fixed": "#004938",
+            "on-secondary-fixed-variant": "#496057",
+            "on-tertiary-fixed-variant": "#2d6570",
+            "primary-fixed-dim": "#a0e2c9",
+            "on-error-container": "#6e0a12",
+            "surface-tint": "#286a56",
+            "secondary-container": "#cee9dc",
+            "surface-bright": "#f6faf6",
+            "tertiary": "#2f6772",
+            "inverse-primary": "#bbffe5",
+            "surface-container-highest": "#dae5df",
+            "surface-dim": "#d2ddd6",
+            "tertiary-container": "#b7effb",
+            "on-tertiary-container": "#215b66",
+            "on-secondary-fixed": "#2d443b",
+            "primary-container": "#adf0d7",
+            "primary-dim": "#195e4b",
+            "on-primary-container": "#175c49",
+            "on-tertiary-fixed": "#034853",
+            "surface-container": "#e8f0ea",
+            "surface-container-high": "#e1eae5",
+            "on-surface-variant": "#57615c",
+            "secondary-dim": "#40584f",
+            "error": "#a83836",
+            "primary": "#286a56",
+            "outline": "#727d78",
+            "secondary-fixed": "#cee9dc",
+            "on-primary-fixed-variant": "#246653",
+            "tertiary-fixed": "#b7effb",
+            "primary-fixed": "#adf0d7",
+            "secondary": "#4c645b",
+            "inverse-surface": "#0a0f0d",
+            "surface-variant": "#dae5df"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Work Sans"],
+            "label": ["Work Sans"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+
+  <!-- TopAppBar -->
+  <header class="top-app-bar">
+    <button class="icon-btn">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <h1 class="font-headline font-bold tracking-tight text-lg text-primary">Greenhouse List</h1>
+    <button class="icon-btn">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+  </header>
+
+  <main class="pt-24 px-6 max-w-2xl mx-auto">
+
+    <!-- Editorial Header -->
+    <section class="mb-10">
+      <h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Manage Categories</h2>
+      <p class="font-body text-on-surface-variant leading-relaxed opacity-80">Organize your greenhouse list by customizing item groupings for a smoother shopping journey.</p>
+    </section>
+
+    <!-- Schnell-Hinzufügen -->
+    <div class="mb-8 flex gap-3">
+      <div class="flex-grow">
+        <input class="category-input" placeholder="Add new category..." type="text" />
+      </div>
+      <button class="add-btn">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+    </div>
+
+    <!-- Kategorien-Liste -->
+    <div class="space-y-4">
+
+      <!-- Obst & Gemüse -->
+      <div class="category-item group">
+        <div class="flex items-center gap-4">
+          <div class="category-icon bg-primary-container text-on-primary-container">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+          </div>
+          <div>
+            <h3 class="font-headline font-semibold text-on-surface">Obst &amp; Gemüse</h3>
+            <span class="item-count-badge">12 Items</span>
+          </div>
+        </div>
+        <div class="category-actions">
+          <button class="action-btn action-btn--edit">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="action-btn action-btn--delete">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Getränke -->
+      <div class="category-item group">
+        <div class="flex items-center gap-4">
+          <div class="category-icon bg-secondary-container text-on-secondary-container">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_drink</span>
+          </div>
+          <div>
+            <h3 class="font-headline font-semibold text-on-surface">Getränke</h3>
+            <span class="item-count-badge">8 Items</span>
+          </div>
+        </div>
+        <div class="category-actions">
+          <button class="action-btn action-btn--edit">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="action-btn action-btn--delete">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Haushalt -->
+      <div class="category-item group">
+        <div class="flex items-center gap-4">
+          <div class="category-icon bg-surface-container-highest text-on-surface-variant">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+          </div>
+          <div>
+            <h3 class="font-headline font-semibold text-on-surface">Haushalt</h3>
+            <span class="item-count-badge">5 Items</span>
+          </div>
+        </div>
+        <div class="category-actions">
+          <button class="action-btn action-btn--edit">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="action-btn action-btn--delete">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Backwaren -->
+      <div class="category-item group">
+        <div class="flex items-center gap-4">
+          <div class="category-icon bg-primary-container text-on-primary-container">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+          </div>
+          <div>
+            <h3 class="font-headline font-semibold text-on-surface">Backwaren</h3>
+            <span class="item-count-badge">4 Items</span>
+          </div>
+        </div>
+        <div class="category-actions">
+          <button class="action-btn action-btn--edit">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="action-btn action-btn--delete">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Milchprodukte -->
+      <div class="category-item group">
+        <div class="flex items-center gap-4">
+          <div class="category-icon bg-secondary-container text-on-secondary-container">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+          </div>
+          <div>
+            <h3 class="font-headline font-semibold text-on-surface">Milchprodukte</h3>
+            <span class="item-count-badge">10 Items</span>
+          </div>
+        </div>
+        <div class="category-actions">
+          <button class="action-btn action-btn--edit">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="action-btn action-btn--delete">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Smart Suggestions -->
+    <section class="suggestion-section">
+      <div class="relative z-10">
+        <h4 class="font-headline font-bold text-on-primary-container text-lg mb-2">Smart Suggestions</h4>
+        <p class="font-body text-sm text-on-primary-container/80 mb-4">Would you like to add these frequently used categories?</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="suggestion-chip">Fleisch &amp; Fisch</span>
+          <span class="suggestion-chip">Tiefkühl</span>
+          <span class="suggestion-chip">Snacks</span>
+        </div>
+      </div>
+      <div class="absolute -right-4 -bottom-4 opacity-10">
+        <span class="material-symbols-outlined text-8xl">nest_eco_leaf</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button class="nav-item">
+      <span class="material-symbols-outlined mb-1">format_list_bulleted</span>
+      <span class="nav-label">Lists</span>
+    </button>
+    <button class="nav-item">
+      <span class="material-symbols-outlined mb-1">kitchen</span>
+      <span class="nav-label">Pantry</span>
+    </button>
+    <button class="nav-item">
+      <span class="material-symbols-outlined mb-1">receipt_long</span>
+      <span class="nav-label">Recipes</span>
+    </button>
+    <button class="nav-item nav-item--active">
+      <span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">settings</span>
+      <span class="nav-label">Settings</span>
+    </button>
+  </nav>
+
+</body>
+</html>

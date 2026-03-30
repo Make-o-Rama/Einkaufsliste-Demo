@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Greenhouse List - Einkaufslisten Übersicht</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#fa746f",
+            "surface": "#f6faf6",
+            "tertiary-fixed-dim": "#a9e0ed",
+            "on-secondary": "#e4fff3",
+            "inverse-on-surface": "#999e9b",
+            "on-surface": "#2b3530",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#c0dace",
+            "on-background": "#2b3530",
+            "on-error": "#fff7f6",
+            "on-primary": "#e4fff3",
+            "tertiary-dim": "#205a65",
+            "error-dim": "#67040d",
+            "background": "#f6faf6",
+            "on-secondary-container": "#3f574e",
+            "surface-container-low": "#eff5f0",
+            "on-tertiary": "#edfbff",
+            "outline-variant": "#aab4af",
+            "on-primary-fixed": "#004938",
+            "on-secondary-fixed-variant": "#496057",
+            "on-tertiary-fixed-variant": "#2d6570",
+            "primary-fixed-dim": "#a0e2c9",
+            "on-error-container": "#6e0a12",
+            "surface-tint": "#286a56",
+            "secondary-container": "#cee9dc",
+            "surface-bright": "#f6faf6",
+            "tertiary": "#2f6772",
+            "inverse-primary": "#bbffe5",
+            "surface-container-highest": "#dae5df",
+            "surface-dim": "#d2ddd6",
+            "tertiary-container": "#b7effb",
+            "on-tertiary-container": "#215b66",
+            "on-secondary-fixed": "#2d443b",
+            "primary-container": "#adf0d7",
+            "primary-dim": "#195e4b",
+            "on-primary-container": "#175c49",
+            "on-tertiary-fixed": "#034853",
+            "surface-container": "#e8f0ea",
+            "surface-container-high": "#e1eae5",
+            "on-surface-variant": "#57615c",
+            "secondary-dim": "#40584f",
+            "error": "#a83836",
+            "primary": "#286a56",
+            "outline": "#727d78",
+            "secondary-fixed": "#cee9dc",
+            "on-primary-fixed-variant": "#246653",
+            "tertiary-fixed": "#b7effb",
+            "primary-fixed": "#adf0d7",
+            "secondary": "#4c645b",
+            "inverse-surface": "#0a0f0d",
+            "surface-variant": "#dae5df"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Work Sans"],
+            "label": ["Work Sans"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- TopAppBar -->
+  <header class="top-app-bar">
+    <div class="flex items-center gap-4">
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <h1 class="font-headline font-semibold tracking-tight text-on-surface text-lg">Greenhouse List</h1>
+    </div>
+    <button class="icon-btn">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+  </header>
+
+  <main class="pt-24 pb-32 px-6 max-w-lg mx-auto min-h-screen">
+
+    <!-- Hero Summary -->
+    <section class="mb-10">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface mb-2">My Collections</h2>
+      <p class="font-body text-on-surface-variant text-lg">You have 3 lists active this week.</p>
+    </section>
+
+    <!-- Bento Layout -->
+    <div class="space-y-8">
+
+      <!-- Gruppe: Heute -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between px-1">
+          <h3 class="font-headline text-sm font-bold uppercase tracking-widest text-primary">Today</h3>
+          <span class="date-badge">OCT 24</span>
+        </div>
+
+        <!-- Hauptkarte Heute -->
+        <div class="bento-card-main">
+          <div class="flex justify-between items-start mb-6">
+            <div class="p-3 bg-primary-container text-on-primary-container rounded-2xl">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">local_grocery_store</span>
+            </div>
+            <span class="status-badge">In Progress</span>
+          </div>
+          <div>
+            <h4 class="font-headline text-xl font-bold text-on-surface mb-1">Weekly Essentials</h4>
+            <div class="flex items-center gap-2 text-on-surface-variant font-body text-sm">
+              <span class="material-symbols-outlined text-sm">inventory_2</span>
+              <span>14 items</span>
+              <span class="mx-1">&bull;</span>
+              <span>Aisle 4, 7, 12</span>
+            </div>
+          </div>
+          <!-- Dekoratives Element -->
+          <div class="absolute -bottom-6 -right-6 opacity-10 text-primary">
+            <span class="material-symbols-outlined text-9xl">potted_plant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gruppe: Morgen -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between px-1">
+          <h3 class="font-headline text-sm font-bold uppercase tracking-widest text-on-surface-variant/60">Tomorrow</h3>
+        </div>
+        <div class="bento-card-row">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 flex items-center justify-center bg-secondary-container text-on-secondary-container rounded-full">
+              <span class="material-symbols-outlined">restaurant</span>
+            </div>
+            <div>
+              <h4 class="font-headline font-bold text-on-surface">Dinner Party Prep</h4>
+              <p class="font-body text-xs text-on-surface-variant">8 items &bull; Pending</p>
+            </div>
+          </div>
+          <button class="p-2 text-outline hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Gruppe: Wochenende -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between px-1">
+          <h3 class="font-headline text-sm font-bold uppercase tracking-widest text-on-surface-variant/60">Weekend</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bento-card-square">
+            <span class="material-symbols-outlined text-primary text-3xl">garden_cart</span>
+            <div>
+              <h4 class="font-headline font-bold text-on-surface leading-tight">Garden Supplies</h4>
+              <p class="font-label text-[10px] text-on-surface-variant mt-1">4 items</p>
+            </div>
+          </div>
+          <div class="bento-card-add">
+            <div class="text-outline-variant">
+              <span class="material-symbols-outlined text-4xl mb-2">add_circle</span>
+              <p class="font-label text-xs font-bold uppercase tracking-widest">Schedule</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abgeschlossene Listen -->
+      <div class="pt-4">
+        <button class="completed-toggle">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-sm">check_circle</span>
+            <span class="font-body text-sm font-medium">View Completed Lists (12)</span>
+          </div>
+          <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FAB -->
+  <button class="fab">
+    <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 600;">add</span>
+  </button>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a class="nav-item nav-item--active" href="#">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">format_list_bulleted</span>
+      <span class="nav-label">Lists</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">kitchen</span>
+      <span class="nav-label">Pantry</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">receipt_long</span>
+      <span class="nav-label">Recipes</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="material-symbols-outlined">settings</span>
+      <span class="nav-label">Settings</span>
+    </a>
+  </nav>
+
+</body>
+</html>
